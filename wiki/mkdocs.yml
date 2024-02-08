@@ -1,40 +1,10 @@
 site_name: X-DIY
 theme:
   name: material
+  logo: 'images/logo.png'
   palette:
     primary: 'blue'
     accent: 'light-blue'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  language: 'en'
-  features:
-    - navigation.tabs
-    - navigation.paging
-    - navigation.prev_next
-    - navigation.expand
-    - navigation.top
-    - navigation.search
-    - navigation.sidebar
-    - navigation.edit_on_github
-    - navigation.footer
-    - navigation.meta
-    - navigation.up
-    - navigation.breadcrumbs
-    - navigation.toc
-    - navigation.favicon
-    - navigation.logo
-    - navigation.title
-    - navigation.author
-    - navigation.description
-    - navigation.meta
-    - navigation.meta_author
-    - navigation.meta_description
-    - navigation.meta_keywords
-    - navigation.meta_og_image
-    - navigation.meta_og_type
-    - navigation.meta_og_site_name
-    - navigation.meta_og_title
-    - navigation.meta_og_description
-    - navigation.meta_og_url
-    - navigation.meta_og_locale
