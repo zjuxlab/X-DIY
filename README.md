@@ -1,5 +1,5 @@
 # X-DIY
-X·Lab EE自学手册项目，基于mkdocs+GitHub WebHooks，实现了自动同步git push自动更新网页内容
+X·Lab EE自学手册项目，基于mkdocs+GitHub WebHooks，实现了自动同步git push自动更新网页内容。
 
 网页地址：[https://zjuxlab.github.io/X-DIY/](https://zjuxlab.github.io/X-DIY/)
 ## 分支 | Branches
