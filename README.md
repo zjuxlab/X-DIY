@@ -28,4 +28,4 @@ git commit -m"commit messages"
 git push origin main
 ```
 
-> 说明：提交过后服务器自动更新网页有一定的延迟，大约5minutes。
+> 说明：提交过后服务器自动更新网页可能有一定的延迟，大约5minutes。
