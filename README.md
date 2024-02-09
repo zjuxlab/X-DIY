@@ -8,7 +8,7 @@ X·Lab EE自学手册项目，基于mkdocs+GitHub WebHooks，实现了自动同�
 * `gh-pages`：`site`目录内容，用于构建GitHub Pages
 
 > 说明：我们在开发网页过程中只需要维护main分支，其余两个分支我已配置好，不用更改。
-## 架构说明
+## 架构说明 | Tree
 * `wiki`目录存放网页内容，`wiki/docs`中的Markdown文件表示网页显示的内容，其结构可在[官方文档](https://markdown-docs-zh.readthedocs.io/zh-cn/latest/)中查看。
 ## 使用方法 | Usage
 ### 1. clone仓库
