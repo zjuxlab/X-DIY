@@ -247,8 +247,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B5%8C%E5%85%A5%E5%BC%8F/stm32/stm-0/" class="md-nav__link">
-        Stm 0
+      <a href="../../../%E5%B5%8C%E5%85%A5%E5%BC%8F/stm32/%E4%BB%80%E4%B9%88%E6%98%AFstm32/" class="md-nav__link">
+        什么是stm32
       </a>
     </li>
   
@@ -486,7 +486,7 @@
 <p>在介绍信号的生成、发送和接收之前，我们先来了解一下声波信号的基本特征。<strong>声波</strong>是一种机械波，是由发声体振动并在介质中传播产生的。声波每秒钟振动的周期数称为声波的频率，单位是赫兹 (Hz)。一般来说，人耳可以听到的声波频率大概在20 Hz到20 kHz之间，频率超过20 kHz的声波我们称为超声波，低于20 Hz的声波称为次声波。</p>
 <p>由于声波的传播是由物体的震动引起了空气的震动，因此声波也可以带动其他物体的震动，出现了类似超声波洗龙虾、超声波洗眼镜、超声波洗牙等应用。</p>
 <p>下图展示了一个频率为1 kHz的正弦声波信号，图中横轴为时间，纵轴为信号的幅度。信号的幅度在1和-1之间周期性变化，变化的频率为1 kHz，即一秒钟内有一千个周期。</p>
-<p><img alt="plot_sound" src="D:\02-Projects\X-DIY\wiki\docs\数理基础\信号处理基础\1. 信号的生成、发送和接收.assets\plot_sound.png" /></p>
+<p><img alt="" src="https://github.com/zjuxlab/X-DIY/blob/main/wiki/docs/images/plot_sound.png" /></p>
 <p>为了产生这段声音，我们只需要在Matlab中运行如下代码就可以。大家可以用MATLAB的 <code>sound()</code>函数将这段声音播放出来看看（代码第5行播放声音），代码最后会将生成的声波保存成本地文件 <code>sound.wav</code>，用电脑上的音频播放器播放该文件的效果应与 <code>sound()</code>函数在代码中直接播放的效果一致。</p>
 <pre><code class="language-matlab">Fs = 48000;                             % 采样频率（单位：Hz）
 T = 4;                                  % 时间长度（单位：s）
