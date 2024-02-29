@@ -660,41 +660,41 @@
 </ul>
 <p>在本文的例子中，我为XLAB标准连接器库添加了一个24p金手指插座。</p>
 <h2 id="eda_1">从立创EDA导出目标原件的封装</h2>
-<p><img alt="lceda1" src="利用立创EDA元件库.assets\lceda1.png" />
-<img alt="lceda2" src="利用立创EDA元件库.assets\lceda2.png" />
+<p><img alt="lceda1" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/lceda1.png" />
+<img alt="lceda2" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/lceda2.png" />
 在立创EDA中新建一块<strong>有且仅有本元件</strong>的PCB，然后导出到Altium Designer。EDA自动生成一个压缩包并下载，里面有AD的工程文件。</p>
 <h2 id="ad">在AD中导入封装</h2>
-<p><img alt="ad1" src="利用立创EDA元件库.assets\ad1.png" />
+<p><img alt="ad1" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad1.png" />
 打开压缩包中的pcbdoc。</p>
-<p><img alt="ad2" src="利用立创EDA元件库.assets\ad2.png" />
+<p><img alt="ad2" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad2.png" />
 复制该元件。</p>
-<p><img alt="ad3" src="利用立创EDA元件库.assets\ad3.png" />
-<img alt="ad4" src="利用立创EDA元件库.assets\ad4.png" /></p>
+<p><img alt="ad3" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad3.png" />
+<img alt="ad4" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad4.png" /></p>
 <p>在元件库的pcblib中新建一个空封装，把复制的元件粘贴到工作区，选中该元件，将其位置调整到坐标原点（x=0, y=0处）</p>
-<p><img alt="ad5" src="利用立创EDA元件库.assets\ad5.png" /></p>
+<p><img alt="ad5" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad5.png" /></p>
 <p>使用Symbol Wizard工具建立该元件对应的原理图符号。在这个例子中，虽然金手指只有24p，但是该连接器带有两个固定用的pad，这两个pad也要算作元件的管脚。当然也可以不算，反正一般也把这种pad悬空。</p>
-<p><img alt="ad6" src="利用立创EDA元件库.assets\ad6.png" />
-<img alt="ad7" src="利用立创EDA元件库.assets\ad7.png" /></p>
+<p><img alt="ad6" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad6.png" />
+<img alt="ad7" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad7.png" /></p>
 <p>绑定封装，并检查封装与元件的管脚映射。</p>
 <h2 id="eda3d">从立创EDA导出3D模型</h2>
 <p>以下功能需要使用Solidworks或其它能处理STEP文件的软件。</p>
-<p><img alt="lceda3" src="利用立创EDA元件库.assets\lceda3.png" /></p>
+<p><img alt="lceda3" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/lceda3.png" /></p>
 <h2 id="solidworkspcb">使用Solidworks去除PCB模型</h2>
-<p><img alt="solidworks1" src="利用立创EDA元件库.assets\solidworks1.png" /></p>
+<p><img alt="solidworks1" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/solidworks1.png" /></p>
 <p>打开STEP文件</p>
-<p><img alt="solidworks2" src="利用立创EDA元件库.assets\solidworks2.png" /></p>
+<p><img alt="solidworks2" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/solidworks2.png" /></p>
 <p>将文件另存为*.sldprt</p>
-<p><img alt="solidworks3" src="利用立创EDA元件库.assets\solidworks3.png" />
-<img alt="solidworks4" src="利用立创EDA元件库.assets\solidworks4.png" /></p>
+<p><img alt="solidworks3" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/solidworks3.png" />
+<img alt="solidworks4" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/solidworks4.png" /></p>
 <p>选中PCB基板并删除</p>
-<p><img alt="solidworks5" src="利用立创EDA元件库.assets\solidworks5.png" /></p>
+<p><img alt="solidworks5" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/solidworks5.png" /></p>
 <p>导出为*.STEP格式</p>
 <h2 id="ad3d">在AD中为封装导入3D模型</h2>
-<p><img alt="ad8" src="利用立创EDA元件库.assets\ad8.png" /></p>
+<p><img alt="ad8" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad8.png" /></p>
 <p>打开刚刚建好的封装，放置3D Body</p>
-<p><img alt="ad9" src="利用立创EDA元件库.assets\ad9.png" /></p>
+<p><img alt="ad9" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad9.png" /></p>
 <p>如果你刚刚已经把封装调整到坐标原点，那么这时候3D文件应该是能恰好对上封装的。</p>
-<p><img alt="ad10" src="利用立创EDA元件库.assets\ad10.png" /></p>
+<p><img alt="ad10" src="../%E5%88%A9%E7%94%A8%E7%AB%8B%E5%88%9BEDA%E5%85%83%E4%BB%B6%E5%BA%93.assets/ad10.png" /></p>
 <p>进入3D视图（默认快捷键：数字3），选中封装，调整Standoff Height，使3D模型恰好贴在焊盘上。</p>
 <p><strong>当然，这个方法可以批量导入一堆器件，只需从LCEDA导出的时候把你要的元件全摆上，再用AD/Solidworks一个个筛就行了。</strong></p>
 
