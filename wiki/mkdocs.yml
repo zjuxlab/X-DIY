@@ -8,3 +8,9 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
