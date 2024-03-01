@@ -21,12 +21,12 @@
 打开压缩包中的pcbdoc。
 
 ![ad2](利用立创EDA元件库.assets/ad2.png)
-复制该元件。
+**将该元件调整到坐标原点（x=0, y=0），然后以坐标原点为参考点复制该元件。**
 
 ![ad3](利用立创EDA元件库.assets/ad3.png)
 ![ad4](利用立创EDA元件库.assets/ad4.png)
 
-在元件库的pcblib中新建一个空封装，把复制的元件粘贴到工作区，选中该元件，将其位置调整到坐标原点（x=0, y=0处）
+在元件库的pcblib中新建一个空封装，把复制的元件粘贴到工作区的坐标原点。
 
 ![ad5](利用立创EDA元件库.assets/ad5.png)
 
@@ -37,10 +37,16 @@
 
 绑定封装，并检查封装与元件的管脚映射。
 
-## 从立创EDA导出3D模型
 以下功能需要使用Solidworks或其它能处理STEP文件的软件。
 
+## 从立创EDA导出3D模型
+
+**立创EDA专业版客户端导出的STEP文件没有元件模型，可能是客户端bug。可以在网页版EDA操作：** [pro.lceda.cn](https://pro.lceda.cn/editor)
+
+
 ![lceda3](利用立创EDA元件库.assets/lceda3.png)
+
+
 
 ## 使用Solidworks去除PCB模型
 ![solidworks1](利用立创EDA元件库.assets/solidworks1.png)
