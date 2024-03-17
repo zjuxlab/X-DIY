@@ -1,4 +1,8 @@
 site_name: X-DIY
+repo_url: "https://github.com/zjuxlab/X-DIY"
+site_description: "浙江大学启真交叉学科创新创业实验室EE自学手册项目"
+site_author: "浙江大学启真交叉学科创新创业实验室硬件技术团队"
+copyright: "Copyright©️浙江大学启真交叉学科创新创业实验室 不可二次分发"
 theme:
   name: material
   logo: 'https://tannin-1316822731.cos.ap-nanjing.myqcloud.com/2024-02-08-%E4%BC%81%E4%B8%9A%E6%A0%87%E5%BF%97%E4%B8%8E%E6%A0%87%E5%87%86%E5%AD%97%E4%BD%93%EF%BC%88%E7%AE%80%E7%A7%B0%EF%BC%89%E7%BB%84%E5%90%88%E8%A7%84%E8%8C%83_%E4%B8%8A%E4%B8%8B%E7%BB%84%E5%90%88_%E5%8F%8D%E7%99%BD.png'
