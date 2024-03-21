@@ -13,14 +13,14 @@
 点击弹出来的小窗顶栏中间的 ***Create*** ，开始新建工程。
 
 <center class ='img'>
-<img title="Create Project" src="SquareLineStudio_assets\create_project.png" width="45%">
+<img title="Create Project" src="SquareLineStudio_assets/create_project.png" width="45%">
 </center>
 ***SquareLine Studio*** 提供了一些可选择的驱动库，比较常用的是 ***Arduino with TFT_eSPI*** ，适用于arduino开发和esp-arduino开发。以下均以使用 ***TFT_eSPI*** 驱动的 ***esp-arduino*** 开发为例子演示操作过程。
 
 右下角可以设置项目的一些初始化参数，比较重要的是 ***Resolution*** 和 ***Color depth*** 两项。
 
 <center class ='img'>
-<img title="Project Settings" src="SquareLineStudio_assets\project_settings.png" width="45%">
+<img title="Project Settings" src="SquareLineStudio_assets/project_settings.png" width="45%">
 </center>
 
 ***Color depth*** 需要根据自己选择的屏幕参数来定，比如最经典的SPI电阻屏，像素色彩为RGB565格式，色深度是16，这里就填16。
@@ -28,7 +28,7 @@
 新建成功后的界面大致如下：
 
 <center class ='img'>
-<img title="Project Init" src="SquareLineStudio_assets\project_init.png" width="45%">
+<img title="Project Init" src="SquareLineStudio_assets/project_init.png" width="45%">
 </center>
 
 左边有可以选择放置的控件，右边可以配置控件以及屏幕的相关参数。
@@ -42,8 +42,8 @@
 参数设定与出来的效果：
 
 <center class ='img'>
-<img title="Button Settings" src="SquareLineStudio_assets\button_settings.png" width="20%">
-<img title="Button Blur" src="SquareLineStudio_assets\button_blur.png" width="45%">
+<img title="Button Settings" src="SquareLineStudio_assets/button_settings.png" width="20%">
+<img title="Button Blur" src="SquareLineStudio_assets/button_blur.png" width="45%">
 </center>
 
 ### 按钮回调函数
@@ -53,7 +53,7 @@
 如下图，我将按钮的回调函数名称设为***I_AM_A_BUTTON***，触发方式为 ***RELEASED***。
 
 <center class ='img'>
-<img title="Call Function" src="SquareLineStudio_assets\call_function.png" width="45%">
+<img title="Call Function" src="SquareLineStudio_assets/call_function.png" width="45%">
 </center>
 
 导出后的回调函数会在 ***ui_events.c*** 文件中，会在后面进一步阐述。
@@ -63,7 +63,7 @@
 ***SquareLine Studio*** 做屏幕跳转逻辑非常方便。
 
 <center class ='img'>
-<img title="Change Screen" src="SquareLineStudio_assets\change_screen.png" width="45%">
+<img title="Change Screen" src="SquareLineStudio_assets/change_screen.png" width="45%">
 </center>
 
 与按钮回调函数一样，选择一个按钮，添加屏幕跳转事件。比较重要的是既要添加 ***CHANGE SCREEN*** 跳转到目标屏幕，也要添加 ***DELETE SCREEN*** 删除当前所在屏幕。
@@ -73,7 +73,7 @@
 ***SquareLine Studio*** 自带了仿真器，在界面设计的右上角，有一个播放型的按键。开始仿真后可以验证设计的屏幕逻辑与控件效果。
 
 <center class ='img'>
-<img title="Project Simulate" src="SquareLineStudio_assets\project_simulate.png" width="45%">
+<img title="Project Simulate" src="SquareLineStudio_assets/project_simulate.png" width="45%">
 </center>
 
 ## 工程导出
@@ -81,13 +81,13 @@
 设计好的项目可以通过两种方式导出：仅导出UI文件和导出整个工程模板。我一般使用导出整个工程文件，结构完整，在其中取出需要的文件使用相对清晰。
 
 <center class ='img'>
-<img title="Project Export" src="SquareLineStudio_assets\project_export.png" width="45%">
+<img title="Project Export" src="SquareLineStudio_assets/project_export.png" width="45%">
 </center>
 
 在 ***Arduino with TFT_eSPI*** 的驱动库下，导出的工程模板主文件为ino文件。整个导出文件夹的结构如下
 
 <center class ='img'>
-<img title="Export Files" src="SquareLineStudio_assets\export_files.png" width="45%">
+<img title="Export Files" src="SquareLineStudio_assets/export_files.png" width="45%">
 </center>
 
 其中， ***TFT_eSPI*** 包括的是底层的SPI驱动代码，可以在其中定义驱动引脚，屏幕驱动芯片型号等。 ***lvgl*** 包括了所有与lvgl的底层文件文件， ***UI*** 包括了所有UI相关的文件，包括控件的定义，回调函数的定义等。
@@ -101,7 +101,7 @@
 ***UI*** 文件夹下的内容最重要，也是后续与单片机开发最紧密相关的。
 
 <center class ='img'>
-<img title="Button Function" src="SquareLineStudio_assets\button_function.png" width="45%">
+<img title="Button Function" src="SquareLineStudio_assets/button_function.png" width="45%">
 </center>
 
 回调函数定义在 ***ui_events.c*** 文件下，在库中引用代码会显示找不到路径，不能在这里添加功能代码。
