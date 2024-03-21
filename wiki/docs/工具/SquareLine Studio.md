@@ -17,6 +17,7 @@
 <center class ='img'>
 <img title="Create Project" src="SquareLineStudio_assets/create_project.png" width="45%">
 </center>
+
 ***SquareLine Studio*** 提供了一些可选择的驱动库，比较常用的是 ***Arduino with TFT_eSPI*** ，适用于arduino开发和esp-arduino开发。以下均以使用 ***TFT_eSPI*** 驱动的 ***esp-arduino*** 开发为例子演示操作过程。
 
 右下角可以设置项目的一些初始化参数，比较重要的是 ***Resolution*** 和 ***Color depth*** 两项。
