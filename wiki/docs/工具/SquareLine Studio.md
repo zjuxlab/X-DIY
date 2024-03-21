@@ -1,5 +1,7 @@
 # SquareLine Studio
 
+[TOC]
+
 ***SquareLine Studio*** 是一款 ***[LVGL (Light and Versatile Embedded Graphics Library)](https://lvgl.io/)*** 官方推出的图形化配置工具，用户可在 ***SquareLine Studio*** 中绘制好需要的UI界面后将驱动库和UI文件导出，配合单片机环境继续开发。
 
 ## 软件安装
