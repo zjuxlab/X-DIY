@@ -620,8 +620,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#ac-sweep" class="md-nav__link">
+    AC Sweep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more" class="md-nav__link">
+    More
   </a>
   
 </li>
@@ -1039,8 +1046,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
+  <a href="#ac-sweep" class="md-nav__link">
+    AC Sweep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more" class="md-nav__link">
+    More
   </a>
   
 </li>
@@ -1072,7 +1086,8 @@ Before reading passage, let&#39;s assume that you have comprehended some basic c
 <li><a href="#multisim">Multisim</a></li>
 <li><a href="#start-with-an-rc-filter">Start with an RC filter</a></li>
 <li><a href="#transient-simulation">Transient Simulation</a></li>
-<li><a href="#"></a></li>
+<li><a href="#ac-sweep">AC Sweep</a></li>
+<li><a href="#more">More</a></li>
 </ul>
 <h2 id="start-with-an-rc-filter">Start with an RC filter</h2>
 <p>Let's build a first-order RC filter to go through some basic operations.</p>
@@ -1087,12 +1102,12 @@ Before reading passage, let&#39;s assume that you have comprehended some basic c
 <p>In Mulisim, time domain analysis is called <strong>Transient Simulation</strong>, which is one of the most frequently used function.</p>
 <ol>
 <li>
-<p>Select Transient Simulation as the active analysis.
-<img alt="" src="../Multisim.assets/Transient1.png" /></p>
+<p>Select Transient Simulation as the active analysis.</p>
+<p><img alt="" src="../Multisim.assets/Transient1.png" /></p>
 </li>
 <li>
-<p>Determine the parameters for a transient simulation.
-  <img alt="" src="../Multisim.assets/Transient2.png" /></p>
+<p>Determine the parameters for a transient simulation.</p>
+<p><img alt="" src="../Multisim.assets/Transient2.png" /></p>
 </li>
 <li>
 <p><strong>Initial conditions</strong>:</p>
@@ -1111,8 +1126,8 @@ Before reading passage, let&#39;s assume that you have comprehended some basic c
 <p>Once you are done, just save it.</p>
 <ol>
 <li>
-<p>Put some probes on it.
-  <img alt="" src="../Multisim.assets/Transient3.png" /></p>
+<p>Put some probes on it.</p>
+<p><img alt="" src="../Multisim.assets/Transient3.png" /></p>
 </li>
 <li>
 <p>The 'V' probes measures the <strong>potential</strong> of certain nodes.</p>
@@ -1127,12 +1142,47 @@ Before reading passage, let&#39;s assume that you have comprehended some basic c
 </li>
 <li>
 <p>Run it. (Click the green 'play' button)
-  <img alt="" src="../Multisim.assets/Transient4.png" /></p>
+    <img alt="" src="../Multisim.assets/Transient4.png" /></p>
 </li>
 </ol>
 <p>That's what you should get if everything goes right. You can see clearly that the output voltage (the green line) is somewhat smaller and lags the source voltage.</p>
 <p>In the 'Output View' window, you can polish the waveform with several settings. Normally, the background color, the line width and grids are what we start with. After that, you can export the waveform as an image, or the whole raw data in .csv format. Sometimes I export the csv file and do some further analysis in MATLAB.</p>
-<h2 id="_1"></h2>
+<h2 id="ac-sweep">AC Sweep</h2>
+<p>You might have heard that all important stuff locate in the frequency domain, at least in the field of signal processing.</p>
+<p>By doing an AC sweep, you can observe how does a certain circuit respond to the input of different frequency.</p>
+<div class="highlight"><pre><span></span><code>Be aware of the difference between a Fourier analysis and an AC sweep
+</code></pre></div>
+<ol>
+<li>
+<p>Select the AC Sweep as the active analysis, just as what you've done in the transient simulation. Don't forget to insert a V-probe at the output node.</p>
+<p><img alt="" src="../Multisim.assets/ACsweep1.png" /></p>
+</li>
+<li>
+<p><strong>FSTART &amp; FSTOP</strong>: The range of frequency variation in which the sweep goes.</p>
+</li>
+<li><strong>Sweep type</strong>: <ul>
+<li><strong>Decade</strong>: the x-axis of the output graph is in the logarithm of 10.</li>
+<li><strong>Octave</strong>: the x-axis is in the logarithm of 8.</li>
+</ul>
+</li>
+<li><strong>Number of points</strong>: a larger number of this leads to better resolution, and predictably longer simulation time.However, the extra time consumption here is not as serious as in the transient simulation. I usually set 1000 as a start.</li>
+<li><strong>Vertical scale</strong>:<ul>
+<li><strong>Logarithmic</strong>: the y-axis is in the logarithm of 10.</li>
+<li><strong>Decibel</strong>: the y-axis is in decibel (dB).</li>
+</ul>
+</li>
+</ol>
+<p>Once you are done with the settings, save them or run at once.</p>
+<p><img alt="" src="../Multisim.assets/ACsweep2.png" /></p>
+<p>Here I toggle the grid on for clarity. You can see the -3dB point of our first-order RC filter is around 100kHz~200kHz.</p>
+<h2 id="more">More</h2>
+<p>There's a lot more you can do. It's actually quite easy to start any simulation and analyze the data, as you should have found out. Here's a list of what you might want to give a try:</p>
+<ul>
+<li><strong>Pole zero</strong>: often used to investigate the performance of a control system, or a filter.</li>
+<li><strong>Fourier</strong>: determine the frequency spectrum of a signal.</li>
+<li><strong>Parameter sweep</strong>: quite useful to tune some components.</li>
+<li><strong>Monte Carlo</strong>: get a insight of what impact do the errors of components make</li>
+</ul>
 
               
             </article>
