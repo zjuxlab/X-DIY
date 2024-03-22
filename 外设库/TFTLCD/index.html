@@ -260,9 +260,61 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TFTLCD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         TFTLCD
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    驱动原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16bit" class="md-nav__link">
+    16bit并口通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spi" class="md-nav__link">
+    SPI通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -924,6 +976,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    驱动原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16bit" class="md-nav__link">
+    16bit并口通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spi" class="md-nav__link">
+    SPI通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -941,6 +1029,44 @@
 
 
 <h1 id="tftlcd">TFTLCD</h1>
+<p>！！！还没写完 ！！！</p>
+<div class="toc">
+<ul>
+<li><a href="#tftlcd">TFTLCD</a><ul>
+<li><a href="#_1">驱动原理</a></li>
+<li><a href="#16bit">16bit并口通信</a></li>
+<li><a href="#spi">SPI通信</a></li>
+<li><a href="#_2">参考资料</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong><em>TFT-LCD</em></strong> 即薄膜晶体管液晶显示器。其英文全称为： <strong><em>Thin Film Transistor-Liquid Crystal Display</em></strong> 。TFT-LCD与无源TN-LCD、STN-LCD的简单矩阵不同，它在液晶显示屏的每一个像素上都设置有一个薄膜晶体管 <strong><em>(TFT)</em></strong> ，可有效地克服非选通时的串扰，使显示液晶屏的静态特性与扫描线数无关，</p>
+<p><strong><em>TFTLCD</em></strong> 的通信方式对于不同的MCU有所不同， <strong><em>16bit</em></strong> 并口通信， <strong><em>SPI</em></strong> 通信， <strong><em>IIC</em></strong> 通信等。根据触摸的采样方式不同， <strong><em>TFTLCD</em></strong> 又可分为电阻屏与电容屏。本文将以 <strong><em>stm32</em></strong> 驱动 <strong><em>16bit</em></strong> 并口传输屏和 <strong><em>esp32</em></strong> 驱动 <strong><em>SPI</em></strong> 屏为例子讲解 <strong><em>TFTLCD</em></strong> 电阻屏的驱动过程，其中stm32的开发环境是 <strong><em>stm32cubemx</em></strong> ，esp32的开发环境是 <strong><em>esp-arduino</em></strong> 。</p>
+<h2 id="_1">驱动原理</h2>
+<p>多数TFTLCD屏幕的驱动MCU自带显存，例如ILI9341，其显存总大小为172800（240×320×18/8），即18位模式（26万色）下的显存量。在16位模式下，ILI9341采用RGB565格式存储颜色数据（在更高级的32位RGB储存颜色中还有RGBA888，Linux开发板中较为常见），此时ILI9341的18位数据线与MCU的16位数据线以及LCD GRAM的对应关系如图所示：</p>
+<p><center class ='img'>
+<img title="颜色数据与总线数据对应关系" src="TFTLCD_assets/LCD总线与颜色数据对应关系.png" width="90%">
+</center></p>
+<p>意思是通过一种通信方式把这16bit数据往屏幕里送即可显示像素。另外还需要明确一些读写的驱动指令，这些底层驱动一般由官方/产家写好代码给出，我们只需要直接调用或者迁移即可，故本文放在代码里面一块阐释。</p>
+<p>驱动参考，可见<a href="http://openedv.com/docs/modules/lcd/index.html" title="正点原子LCD液晶屏">正点原子LCD液晶屏</a>，或读者购买的屏幕的淘宝商家，一般都可以要到对应的资料</p>
+<h2 id="16bit">16bit并口通信</h2>
+<p>本文以常用的 <strong><em>ILI9341</em></strong> 驱动的 <strong><em>2.8寸</em></strong> 屏为例。</p>
+<p>CubeMX配置如下</p>
+<p><center class ='img'>
+<img title="CubeMX配置" src="TFTLCD_assets/16bit并口屏cubemx配置.png" width="65%">
+</center></p>
+<p>其中带TOUCH前缀的是触摸相关引脚。</p>
+<p>一般驱动库都会带一个初始化屏幕参数的头文件，用注释的方式选择自己屏幕的驱动MCU，以及一些屏幕分辨率参数等。</p>
+<p>找到用于显示屏幕的API函数</p>
+<p><center class ='img'>
+<img title="CubeMX配置" src="TFTLCD_assets/16bit_displayAPI.png" width="65%">
+</center></p>
+<p>// 这一小节我写不来，蹲一个人写得更详细一点</p>
+<h2 id="spi">SPI通信</h2>
+<p>本小节使用的库是经典的eTFT_SPI库，可以在arduino中安装</p>
+<h2 id="_2">参考资料</h2>
+<p><a href="https://blog.csdn.net/qq_43441284/article/details/124413430" title="STM32学习记录0010——TFTLCD液晶显示屏">STM32学习记录0010——TFTLCD液晶显示屏</a></p>
 
               
             </article>
