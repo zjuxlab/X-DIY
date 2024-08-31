@@ -22,7 +22,7 @@
 
 ## POR and non-POR Reset
 
-![alt text](<Assets/Power and Reset Sequencing Waveform.png>)
+![alt text](<assets/Power_and_Reset_Sequencing_Waveform.png>)
 
 POR is controlled by the **low effective** pin PS_POR_B. It must be held low during the power ramp-up and the establishment of PS_CLK. When it is de-asserted, the booting sequence begins.
  
@@ -39,18 +39,18 @@ VMODES signals determine the voltage level of the two PS MIO bank. MIO[8] is for
 
  - Use 20K resistors to tied them high or low.
 
-![alt text](<Assets/Boot Mode MIO Strapping Pins.png>)
+![alt text](<assets/Boot_Mode_MIO_Strapping_Pins.png>)
 
 ### QSPI Boot
 
 The QSPI Flash can be in single device mode with x1, x2 or x4 bit width, or dual device (Dual SS) mode with stacked x4 or parallel x8 configuration.
 
-![alt text](<Assets/Quad-SPI Single SS 4-bit IO.png>)
-![alt text](<Assets/Quad-SPI Dual SS 4-bit Stacked IO.png>)
-![alt text](<Assets/Quad-SPI Dual SS, 8-bit Parallel IO.png>)
+![alt text](<assets/Quad-SPI_Single_SS_4-bit_IO.png>)
+![alt text](<assets/Quad-SPI_Dual_SS_4-bit_Stacked_IO.png>)
+![alt text](<assets/Quad-SPI_Dual_SS,_8-bit_Parallel_IO.png>)
 
 MIO Pins are configured as:
-![alt text](<Assets/Quad-SPI Boot MIO Register Settings.png>)
+![alt text](<assets/Quad-SPI_Boot_MIO_Register_Settings.png>)
 
 ### NAND/NOR Flash Boot
 
@@ -60,7 +60,7 @@ Under construction...
 
 Needs up to 32GB SD/SDHC card with FAT16/32 file system.
 
-![alt text](<Assets/SD Card Boot MIO Register Settings.png>)
+![alt text](assets/SD_Card_Boot_MIO_Register_Settings.png)
 
 ### JTAG Boot
 
