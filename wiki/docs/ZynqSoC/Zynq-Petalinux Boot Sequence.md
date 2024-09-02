@@ -24,9 +24,9 @@
 
 ![alt text](<assets/Power_and_Reset_Sequencing_Waveform.png>)
 
-POR is controlled by the **low effective** pin PS_POR_B. It must be held low during the power ramp-up and the establishment of PS_CLK. When it is de-asserted, the booting sequence begins.
+POR is controlled by the **low effective** pin PS_POR_B. It must be held low during the power ramp-up and the establishing of PS_CLK. When it is de-asserted, the booting sequence begins.
  
-non-POR is controlled by PS_SRST_B, fallign edge effective. It should be driven high 2us before the POR event. The AX7020 dev board simply tied it to 1.8V (BANK501 voltage).
+non-POR is controlled by PS_SRST_B, falling edge effective. It should be driven high 2us before the POR event. The AX7020 dev board simply tied it to 1.8V (BANK501 voltage).
 
 PROGRAM_B controls the PL hardware reset, low effective. Asserting it will clear all registers in PL, then PL will wait for the new bitstream. It can be left high (3.3V for BANK 0?) if there is no need to re-program PL during operation.
 
