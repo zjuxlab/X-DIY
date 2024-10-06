@@ -8,9 +8,9 @@
 
 ### 1. 将本仓库Fork到你的账户中：
 
-![fork1](../../readme/fork1.png)
+![fork1](./images/readme/fork1.png)
 
-![fork2](../..//readme/fork2.png)
+![fork2](./images/readme/fork2.png)
 
 ### 2. 将你账户中的仓库Clone到本地
 
@@ -36,12 +36,12 @@ git push origin main                #将你的修改提交到云端的main分支
 ### 4. 提交Pull Request
 
 在你自己的仓库中，点击Contribute->Open pull request
-![request1](../../readme/request1.png)
+![request1](./images/readme/request1.png)
 
-![request2](../../readme/request2.png)
+![request2](./images/readme/request2.png)
 
 往下翻一点，你可以在提交前检查更改的内容。
-![request3](../../readme/request3.png)
+![request3](./images/readme/request3.png)
 
 ### 5. 等待管理员手动将Pull request整合到主页面中
 
