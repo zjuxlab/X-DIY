@@ -1,9 +1,9 @@
+# Toolchain Setup
+
 - [Toolchain Setup](#toolchain-setup)
   - [Linux](#linux)
     - [Setup Linux Tools](#setup-linux-tools)
   - [Use Petalinux Local Mirror to Speed Up Kernel Building](#use-petalinux-local-mirror-to-speed-up-kernel-building)
-
-# Toolchain Setup
 
 ## Linux
 
@@ -81,7 +81,7 @@ However, when you delete the project without setting a global SSTATE path in pri
                     local sstate feeds url --->    
                         <path to arm/ directory>
 
-![alt text](<assets/Change_Yocto_Settings_for_Local_Mirror.png>)
+![alt text](<./assets/Change_Yocto_Settings_for_Local_Mirror.png>)
 
 3. For setting up the download and shared state directories add the following variables in the <plnx-proj-root>/project-spec/meta-user/conf/petalinuxbsp.conf file.
 

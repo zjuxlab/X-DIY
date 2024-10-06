@@ -1,12 +1,13 @@
+-
 # USB Configuration
+
+##  Device Tree
 
 - [USB Configuration](#usb-configuration)
   - [Device Tree](#device-tree)
     - [Edit](#edit)
     - [Explanation](#explanation)
 
-
-##  Device Tree
 
 ### Edit
 

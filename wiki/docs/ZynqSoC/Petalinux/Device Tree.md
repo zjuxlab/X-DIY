@@ -6,6 +6,7 @@
   - [Get a DTS to analyze](#get-a-dts-to-analyze)
   - [Format](#format)
 
+
 ## List of Argots
  - **DTS**: Device Tree Source
  - **DTC**: Device Tree Complier
@@ -20,7 +21,7 @@ A device tree contains vital information of peripherals, like the base address o
 
 Under /image/linux/ of any built Petalinux project, you may run:
 
-        dtc -I dtb -O dts system.dts system.dtb
+        dtc -I dtb -O dts -o system.dts system.dtb
 
 To decompile the DTB into DTS.
 
