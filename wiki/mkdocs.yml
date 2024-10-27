@@ -43,6 +43,9 @@ nav:
         - ESP32环境搭建: 嵌入式开发/单片机(MCU)/ESP32/ESP32环境搭建.md
     - 单板计算机(SBC):
       - 关于嵌入式linux开发和使用SBC: 嵌入式开发/单板计算机(SBC)/关于嵌入式linux开发和使用SBC.md
+  - 电路设计:
+    - 电源:
+      - Notes on DCDC converters.md: 电路设计/电源/Notes on DCDC converters.md
   - 工具:
     - vscode: 工具/vscode.md
     - EDA: 工具/EDA.md
