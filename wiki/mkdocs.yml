@@ -19,3 +19,34 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+nav:
+  - 首页: index.md
+  - 数理基础:
+    - 前言: 数理基础/前言.md
+    - 微积分: 数理基础/微积分.md
+    - 线性代数: 数理基础/线形代数.md
+    - 常微分方程: 数理基础/常微分方程.md
+    - 信号与系统: 数理基础/信号与系统.md
+    - 控制理论: 数理基础/控制理论.md
+  - 编程基础:
+    - C语言进阶: 编程基础/C语言进阶.md
+    - Python入门: 编程基础/Python入门.md
+    - Git: 编程基础/Git.md
+    - 代码规范: 编程基础/代码规范.md
+  - 嵌入式开发:
+    - 前言: 嵌入式开发/前言.md
+    - 基础理论:
+      - 时钟树: 嵌入式开发/基础理论/时钟树.md
+    - 单片机(MCU):
+      - 如何入门嵌入式？: 嵌入式开发/单片机(MCU)/如何入门嵌入式？.md
+      - ESP32:
+        - ESP32环境搭建: 嵌入式开发/单片机(MCU)/ESP32/ESP32环境搭建.md
+    - 单板计算机(SBC):
+      - 关于嵌入式linux开发和使用SBC: 嵌入式开发/单板计算机(SBC)/关于嵌入式linux开发和使用SBC.md
+  - 工具:
+    - vscode: 工具/vscode.md
+    - EDA: 工具/EDA.md
+    - AD:
+      - 元件库的建立和维护: 工具/AD/元件库的建立和维护.md
+    - SquareLineStudio: 工具/SquareLineStudio.md
+    - 优质资源合集: 工具/优质资源合集.md
