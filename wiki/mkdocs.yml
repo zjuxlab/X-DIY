@@ -8,8 +8,20 @@ theme:
   name: material
   logo: 'https://tannin-1316822731.cos.ap-nanjing.myqcloud.com/2024-02-08-%E4%BC%81%E4%B8%9A%E6%A0%87%E5%BF%97%E4%B8%8E%E6%A0%87%E5%87%86%E5%AD%97%E4%BD%93%EF%BC%88%E7%AE%80%E7%A7%B0%EF%BC%89%E7%BB%84%E5%90%88%E8%A7%84%E8%8C%83_%E4%B8%8A%E4%B8%8B%E7%BB%84%E5%90%88_%E5%8F%8D%E7%99%BD.png'
   palette:
-    primary: 'blue'
-    accent: 'light-blue'
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
