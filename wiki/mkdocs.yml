@@ -45,7 +45,7 @@ nav:
       - 关于嵌入式linux开发和使用SBC: 嵌入式开发/单板计算机(SBC)/关于嵌入式linux开发和使用SBC.md
   - 电路设计:
     - 电源:
-      - Notes on DCDC converters.md: 电路设计/电源/Notes on DCDC converters.md
+      - Notes on DCDC converters: 电路设计/电源/Notes on DCDC converters.md
   - 工具:
     - vscode: 工具/vscode.md
     - EDA: 工具/EDA.md
